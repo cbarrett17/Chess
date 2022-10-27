@@ -1,44 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game {
     private GameBoard board;
-    private Player white;
-    private Player black;
+    private Player currentPlayer;
 
-    public Game() {
-        super();
-    }
+    private List<Player> players;
+    private List<Move> movesMade;
 
-    public void setColorWhite(Player player) {
-        this.white = player;
-    }
-
-    public void setColorBlack(Player player) {
-        this.black = player;
-    }
-
-    public GameBoard getBoard() {
-        return board;
-    }
-
-    public void setBoard(GameBoard board) {
-        this.board = board;
-    }
-
-    public Player getWhite() {
-        return white;
-    }
-
-    public void setWhite(Player white) {
-        this.white = white;
-    }
-
-    public Player getBlack() {
-        return white;
-    }
-
-    public void setBlack(Player black) {
-        this.black = black;
-    }
-
-    public void initBoardWithPlayers() {
+    private void initGame(Player player1, Player player2) {
+        players.set(0, player1);
+        players.set(1, player2);
     }
 }

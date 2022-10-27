@@ -3,6 +3,11 @@ public class Spot {
     private int y;
     private GamePiece piece;
 
+    public Spot(int x, int y) {
+        this.setX(x);
+        this.setY(y);
+    }
+
     public Spot(int x, int y, GamePiece piece) {
         this.setX(x);
         this.setY(y);
@@ -10,27 +15,27 @@ public class Spot {
 
     }
 
-    private void setPiece(GamePiece piece) {
+    public void setPiece(GamePiece piece) {
         this.piece = piece;
     }
 
-    private GamePiece getPiece() {
+    public GamePiece getPiece() {
         return this.piece;
     }
 
-    private void setX(int x) {
+    public void setX(int x) {
         this.x = x;
     }
 
-    private int getX() {
+    public int getX() {
         return this.x;
     }
 
-    private void setY(int y) {
+    public void setY(int y) {
         this.y = y;
     }
 
-    private int getY() {
+    public int getY() {
         return this.y;
     }
 }

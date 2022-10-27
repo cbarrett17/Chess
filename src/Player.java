@@ -1,11 +1,11 @@
 public class Player {
-    private final boolean white;
+    private final boolean isWhite;
 
     public Player(boolean white) {
-        this.white = white;
+        this.isWhite = white;
     }
 
     public boolean isWhite() {
-        return this.white;
+        return this.isWhite;
     }
 }
