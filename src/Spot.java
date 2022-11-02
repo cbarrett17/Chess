@@ -6,13 +6,7 @@ public class Spot {
     public Spot(int x, int y) {
         this.setX(x);
         this.setY(y);
-    }
-
-    public Spot(int x, int y, GamePiece piece) {
-        this.setX(x);
-        this.setY(y);
-        this.setPiece(piece);
-
+        this.setPiece(null);
     }
 
     public void setPiece(GamePiece piece) {

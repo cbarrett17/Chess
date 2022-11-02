@@ -1,24 +1,15 @@
-import java.util.List;
-
 public class GameBoard {
     Spot[][] spots;
-    List<Integer> pieceColor;
-    List<Integer> piecePlace;
 
     public GameBoard() {
         this.initBoard();
     }
 
     public void initBoard() {
-        int whitePieces = 0;
-        int blackPieces = 7;
+        int whiteRow = 0;
+        int blackRow = 7;
         int whitePawns = 1;
         int blackPawns = 6;
-
-        pieceColor.set(0, whitePieces);
-        pieceColor.set(1, blackPieces);
-        piecePlace.set(0, whitePawns);
-        piecePlace.set(1, blackPawns);
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
@@ -35,5 +26,18 @@ public class GameBoard {
         }
 
         // add pieces for placement 0 and 7
+        populateBoardPieces(whiteRow, true);
+        populateBoardPieces(blackRow, false);
+    }
+
+    private void populateBoardPieces(int pieceRow, boolean isWhite) {
+        spots[pieceRow][0].setPiece(new Rook(isWhite));
+        spots[pieceRow][1].setPiece(new Knight(isWhite));
+        spots[pieceRow][2].setPiece(new Bishop(isWhite));
+        spots[pieceRow][3].setPiece(new Queen(isWhite));
+        spots[pieceRow][4].setPiece(new King(isWhite));
+        spots[pieceRow][5].setPiece(new Bishop(isWhite));
+        spots[pieceRow][6].setPiece(new Knight(isWhite));
+        spots[pieceRow][7].setPiece(new Rook(isWhite));
     }
 }
