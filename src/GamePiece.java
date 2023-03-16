@@ -35,6 +35,7 @@ class King extends GamePiece {
 
     @Override
     public boolean validMove(GameBoard board, Spot current, Spot destination) {
+        // move is valid if the square is +/- one
         return false;
     }
 }
@@ -48,6 +49,7 @@ class Queen extends GamePiece {
 
     @Override
     public boolean validMove(GameBoard board, Spot current, Spot destination) {
+        // move is valid if square is diagonal/equal x or y
         return false;
     }
 }
@@ -61,6 +63,7 @@ class Knight extends GamePiece {
 
     @Override
     public boolean validMove(GameBoard board, Spot current, Spot destination) {
+        // move is valid if square is two out, one +/- x/y
         return false;
     }
 }
@@ -74,6 +77,7 @@ class Bishop extends GamePiece {
 
     @Override
     public boolean validMove(GameBoard board, Spot current, Spot destination) {
+        // move is valid if square is diagonal
         return false;
     }
 }
@@ -87,6 +91,7 @@ class Rook extends GamePiece {
 
     @Override
     public boolean validMove(GameBoard board, Spot current, Spot destination) {
+        // move is valid if square is equal x/y
         return false;
     }
 }
@@ -100,6 +105,7 @@ class Pawn extends GamePiece {
 
     @Override
     public boolean validMove(GameBoard board, Spot current, Spot destination) {
+        // move is valid if square is +1, +2 on first move
         return false;
     }
 }
