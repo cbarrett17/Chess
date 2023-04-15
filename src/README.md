@@ -11,7 +11,7 @@ Chess Outline
 │   │   ├── Queen.java
 │   │   └── King.java
 │   ├── player/
-│   │   ├── Player.java
+│   │   ├── player.Player.java
 │   │   ├── HumanPlayer.java
 │   │   └── ComputerPlayer.java
 │   ├── ui/
