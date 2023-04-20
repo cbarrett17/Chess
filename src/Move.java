@@ -1,14 +1,14 @@
 public class Move {
-    private Player player;
-    private Spot current;
-    private Spot destination;
+    private GamePiece piece;
+    private Spot start;
+    private Spot end;
     private GamePiece pieceMoved;
     private GamePiece pieceKilled;
 
-    public Move(Player player, Spot current, Spot destination) {
-        this.player = player;
-        this.current = current;
-        this.destination = destination;
+    public Move(GamePiece piece, Spot current, Spot destination) {
+        this.piece = piece;
+        this.start = current;
+        this.end = destination;
         this.pieceMoved = current.getPiece();
     }
 }
